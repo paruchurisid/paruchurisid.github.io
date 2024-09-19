@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Siddhartha Paruchuri's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Copperplate', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+        nav {
+            background-color: #0066cc;
+            padding: 15px;
+            text-align: left;
+            position: relative;
+        }
+        nav .menu-icon {
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+            background-color: #0066cc;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul li {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #005bb5;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #005bb5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-family: 'Georgia', serif;
+        }
+        header p {
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 10px 0 0;
+            color: #ddd;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #292929;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #ddd;
+        }
+        .intro {
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 30%; /* Adjust to fit three images per row */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+                justify-content: flex-end;
+                position: static;
+                width: auto;
+                background-color: transparent;
+                top: 0;
+            }
+            nav ul li {
+                border-bottom: none;
+                padding: 0;
+            }
+            nav ul li a {
+                padding: 15px;
+            }
+            nav .menu-icon {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Siddhartha Paruchuri's Flagship Portfolio Website</h1>
+        <p></p>
+    </header>
+
+    <section>
+        <div class="intro">
+            <p>
+                Hi, I'm Siddhartha Paruchuri! I'm a passionate student of Computer Science and Engineering,
+                specializing in Artificial Intelligence and Database Systems at The Ohio State University.
+                My journey is driven by curiosity, innovation, and a relentless pursuit of knowledge.
+                Welcome to a glimpse into my world where technology meets creativity.
+            </p>
+        </div>
+
+        <div class="gallery">
+            <img src="photo1.jpeg" alt="Brooklyn Bridge in New York">
+            <img src="photo2.jpg" alt="Lake Louise in Banff, Alberta, Canada">
+            <img src="photo3.jpg" alt="High School Football Picture / An Album Cover That I was on">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Siddhartha Paruchuri. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
