@@ -73,25 +73,20 @@
             max-width: 1000px;
             background-color: #292929;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
             color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .intro {
-            margin-bottom: 40px;
-            font-size: 1.2em;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            flex: 1;
+            margin-left: 20px;
         }
         .gallery img {
-            max-width: 100%;
+            max-width: 300px;
             height: auto;
-            margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            max-width: 30%; /* Adjust to fit three images per row */
         }
         footer {
             background-color: #333;
@@ -99,6 +94,18 @@
             padding: 20px;
             text-align: center;
             margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro {
+                margin-left: 0;
+            }
+            .gallery img {
+                margin-bottom: 20px;
+            }
         }
         @media (min-width: 768px) {
             nav ul {
@@ -141,19 +148,32 @@
     </header>
 
     <section>
+        <div class="gallery">
+            <img src="mainphoto.JPG" alt="Siddhartha Paruchuri">
+        </div>
         <div class="intro">
             <p>
-                Hi, I'm Siddhartha Paruchuri! I'm a passionate student of Computer Science and Engineering,
-                specializing in Artificial Intelligence and Database Systems at The Ohio State University.
-                My journey is driven by curiosity, innovation, and a relentless pursuit of knowledge.
-                Welcome to a glimpse into my world where technology meets creativity.
+                With a passion for technology and problem-solving, I am pursuing a Bachelor
+                of Engineering degree in Computer Science and Engineering with a dual
+                specialization in Artificial Intelligence and Database Systems, accompanied by
+                a Minor in Business at The Ohio State University, expected to graduate in 2026.
+                Academically, I am also a pre-law student interested in pursuing a career
+                in law, specifically focusing on Intellectual Property concerning Artificial Intelligence.
             </p>
-        </div>
-
-        <div class="gallery">
-            <img src="photo1.jpeg" alt="Brooklyn Bridge in New York">
-            <img src="photo2.jpg" alt="Lake Louise in Banff, Alberta, Canada">
-            <img src="photo3.jpg" alt="High School Football Picture / An Album Cover That I was on">
+    
+            <p>
+                As a part-time job, driven by my curiosity in the automotive industry,
+                I work as a Maintenance Technician at Firestone under Bridgestone Americas.
+                Here, I am learning more about automotive maintenance and care, focusing
+                on tires, suspension, and engine work.
+            </p>
+    
+            <p>
+                As a student, I have developed a strong foundation in programming languages such as Java,
+                Python, and C#. I am also working to learn more about cloud-based computing.
+                My creativity and skills have led me to design and develop games using Unity and Unreal Engine.
+                I have participated in several hackathons and competitions.
+            </p>
         </div>
     </section>
 
@@ -174,4 +194,3 @@
 
 </body>
 </html>
-
