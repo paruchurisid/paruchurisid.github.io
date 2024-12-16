@@ -3,194 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Siddhartha Paruchuri's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Copperplate', 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #f4f4f4;
-        }
-        nav {
-            background-color: #0066cc;
-            padding: 15px;
-            text-align: left;
-            position: relative;
-        }
-        nav .menu-icon {
-            font-size: 2em;
-            color: white;
-            cursor: pointer;
-            display: inline-block;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: none;
-            background-color: #0066cc;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        nav ul li {
-            text-align: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #005bb5;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            display: block;
-        }
-        nav ul li a:hover {
-            background-color: #005bb5;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-family: 'Georgia', serif;
-        }
-        header p {
-            font-size: 1.5em;
-            font-style: italic;
-            margin: 10px 0 0;
-            color: #ddd;
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1000px;
-            background-color: #292929;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .intro {
-            flex: 1;
-            margin-left: 20px;
-        }
-        .gallery img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        @media (max-width: 768px) {
-            section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .intro {
-                margin-left: 0;
-            }
-            .gallery img {
-                margin-bottom: 20px;
-            }
-        }
-        @media (min-width: 768px) {
-            nav ul {
-                display: flex;
-                justify-content: flex-end;
-                position: static;
-                width: auto;
-                background-color: transparent;
-                top: 0;
-            }
-            nav ul li {
-                border-bottom: none;
-                padding: 0;
-            }
-            nav ul li a {
-                padding: 15px;
-            }
-            nav .menu-icon {
-                display: none;
-            }
-        }
-    </style>
+    <title>Adit Anup</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Hopefully preloading images will help with overlap bug -->
+    <link rel="preload" as="image" href="images/AmericanElectricPower.png" />
+    <link rel="preload" as="image" href="images/construct.jpg" />
+    <link rel="preload" as="image" href="images/coverImage0.jpg" />
+    <link rel="preload" as="image" href="images/DeutscheBank.png" />
+    <link rel="preload" as="image" href="images/HackOHIOImage.jpeg" />
+    <link rel="preload" as="image" href="images/Nationwide.png" />
+    <link rel="preload" as="image" href="images/OHIOPicture1.JPG" />
+    <link rel="preload" as="image" href="images/PodcastImage.jpeg" />
+    <link rel="preload" as="image" href="images/TEDxImage.jpeg" />
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Animate On Scroll Library CSS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <!--  Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  <!-- images loaded library-->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
 </head>
 <body>
+    <div class="container-fluid maxWidth">
 
-    <nav>
-        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-        <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header>
-        <h1>Siddhartha Paruchuri's Flagship Portfolio Website</h1>
-        <p></p>
-    </header>
-
-    <section>
-        <div class="gallery">
-            <img src="mainphoto.JPG" alt="Siddhartha Paruchuri">
+        <!-- Navigation-->
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-lg" >
+                <div class="container-fluid maxWidth">
+                    <a class="navbar-brand" id="logo" href="#"><b>Adit Anup</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="https://drive.google.com/file/d/1IfWJkTHI1TcNu3l0P3hVB3C5b2dcsgay/view?usp=sharing">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aditanup/">LinkedIn</a>
+                          </li>
+                        </ul>
+                  </div>
+                </div>
+              </nav>
         </div>
-        <div class="intro">
-            <p>
-                With a passion for technology and problem-solving, I am pursuing a Bachelor
-                of Engineering degree in Computer Science and Engineering with a dual
-                specialization in Artificial Intelligence and Database Systems, accompanied by
-                a Minor in Business at The Ohio State University, expected to graduate in 2026.
-                Academically, I am also a pre-law student interested in pursuing a career
-                in law, specifically focusing on Intellectual Property concerning Artificial Intelligence.
-            </p>
-    
-            <p>
-                As a part-time job, driven by my curiosity in the automotive industry,
-                I work as a Maintenance Technician at Firestone under Bridgestone Americas.
-                Here, I am learning more about automotive maintenance and care, focusing
-                on tires, suspension, and engine work.
-            </p>
-    
-            <p>
-                As a student, I have developed a strong foundation in programming languages such as Java,
-                Python, and C#. I am also working to learn more about cloud-based computing.
-                My creativity and skills have led me to design and develop games using Unity and Unreal Engine.
-                I have participated in several hackathons and competitions.
-            </p>
+
+        <div class="coverImageSpacerDiv"></div>
+
+        <!-- Cover Image -->
+        <div class="row">
+            <div data-aos="zoom-in-down" data-aos-once="true" data-aos-duration="800" class="col-12 coverImageContainer">
+                <img class="coverImage0" src="images/HackOHIOImage.jpeg" alt="Cover image">
+            </div>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 Siddhartha Paruchuri. All Rights Reserved.</p>
-    </footer>
+        <div class="spacerDiv"></div>
 
+        <div class="row rowPadding">
+            <div data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1000" class="col-sm-12 columnContainerGrey greyBackground">
+                <div id="about" class="quote">
+                    <h1>
+                        <b>
+                            Hi, I'm Adit. I'm a rising senior at The Ohio State University majoring in Computer Science and minoring in Economics. 
+                        </b>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacerDiv"></div>
+
+        <div class="row rowPadding">
+            <div data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1000" class="col-sm-12 columnContainer blackBackground">
+                <div class="quote">
+                    <h1>
+                        <b>I'm passionate about creating tech, products, and programs that solve hard problems and empower people.</b>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience" class="spacerDiv"></div>
+
+        <div class="row grid" data-masonry="{&quot;percentPosition&quot;: true }">
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px; background-color: rgb(245, 245, 247); border-width: 0;">
+              <iframe style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" width="100%" height="315" src="https://www.youtube-nocookie.com/embed/bZahsA8McIQ?si=XPZbvyxyHeshNSXX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="card-body">
+                <h1 class="card-title"><b>TEDx Talk</b></h1>
+                <p class="card-text">My TED talk <em>Experiencing Reflection</em> is about the importance of reflection in our lives and how it can be cultivated through experiential learning. </p>
+                <p class="card-text"><small class="text-muted">View on <a  target="_blank" href="https://www.ted.com/talks/adit_anup_experiencing_reflection">TED</a> or <a  target="_blank" href="https://www.youtube.com/watch?v=bZahsA8McIQ">YouTube</a></small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px; background-color: rgb(245, 245, 247); border-width: 0;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/coverImage0.jpg" alt="agriculture image">
+              <div class="card-body">
+                <h1 class="card-title"><b>CropFusion</b></h1>
+                <p class="card-text">
+                  I work with the ixLab research group at Ohio State led by Prof. Arnab Nandi. The group's research focuses on interactive data experiences and multimodal data management.
+                </p>
+                <p class="card-text">
+                  I served as an engineer for <a  target="_blank" href="https://go.osu.edu/cropfusion">CropFusion</a>, a research initiative that produces AI-powered insights from the fusion of multimodal data in agriculture to benefit farmers.
+                </p>
+                <p class="card-text">
+                  I developed code and processed data for a <a target="_blank" href="https://go.osu.edu/cropfusion-viz">web app</a> that visualizes and provides insights on the collected multimodal agricultural data, designed to enable farmers to make precise, data-driven decisions. Utilized JavaScript, React, DeckGL, Python, and Plotly Dash
+                </p>
+                <p class="card-text">
+                  Co-author on a paper published in the Proceedings of the International Conference on Precision Agriculture.
+                </p>
+                <p class="card-text"><small class="text-muted"><a  target="_blank" href="https://go.osu.edu/cropfusion">CropFusion Homepage</a> | <a  target="_blank" href="https://go.osu.edu/cropfusion-viz">CropFusion Analytica Demo</a></small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px; background-color: rgb(245, 245, 247); border-width: 0;" >
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/PodcastImage.jpeg" alt="podcast image">
+              <div class="card-body">
+                <h1 class="card-title"><b>Enginuity Podcast</b></h1>
+                <p class="card-text">
+                    I was featured on the <a  target="_blank" href="https://podcast.osu.edu/enginuity/2022/09/15/ep-9-hackohi-o-the-invention-marathon/">Enginuity</a> podcast hosted by Dr. Ayanna Howard, dean of The Ohio State University College of Engineering. 
+                </p>
+                <p class="card-text"><small class="text-muted">Listen on <a target="_blank" href="https://podcasts.apple.com/us/podcast/enginuity/id1590546820?i=1000579587197">Apple Podcasts</a> or <a target="_blank" href="https://podcast.osu.edu/enginuity/2022/09/15/ep-9-hackohi-o-the-invention-marathon/">online</a></small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px; background-color: rgb(245, 245, 247); border-width: 0;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/OHIOPicture1.JPG" alt="podcast image">
+              <div class="card-body">
+                <h1 class="card-title"><b>OHI/O</b></h1>
+                <p class="card-text">
+                    I'm passionate about developing and sharing tech experiences with others. I've worked towards this passion at <a href="https://hack.osu.edu/" target="_blank">OHI/O</a> - Ohio State's hackathon program. Together, my team and I work to deliver accessible, engaging, and fun programs to the student community.
+                </p>
+                <p>
+                    In 2022, I served as event lead for <a href="https://hack.osu.edu/2022" target="_blank">HackOHI/O</a>, Ohio State's premier hackathon with over 1100 registrants and 800 participants. In 2024, I served as event lead for <a href="https://hack.osu.edu/show/2024/" target="_blank">ShowOHI/O</a>, a tech entrepreneurship showcase that featured 22 startups from the Ohio State community. 
+                </p>
+                <p class="card-text">
+                    I was recognized with a leadership award and scholarship from The Ohio State University, Department of Computer Science Engineering for my leadership through the program. I am also quoted/featured in an <a target="_blank" href="https://www.osu.edu/impact/teaching-and-learning/hack-ohio-jobs">editorial article</a> that was featured on The Ohio State University homepage. 
+                </p>
+                <p class="card-text"><small class="text-muted"><a target="_blank" href="https://hack.osu.edu/">OHI/O Homepage</a></small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px; background-color: rgb(245, 245, 247); border-width: 0;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/construct.jpg" alt="podcast image">
+              <div class="card-body">
+                <h1 class="card-title"><b>Contruct I/O</b></h1>
+                <p class="card-text">
+                  I spoke at <a href="https://web.cvent.com/event/abc08006-ebf7-4145-b63c-603fd6f165b4/summary">Construct I/O</a>, a conference for innovators and entrepreneurs in tech at Ohio State. I moderated a fireside discussion with Nicholas Daniel, Chief Product Officer at Etsy, on how AI is shaping the future of product development. </p>
+                <p class="card-text"><small class="text-muted"><a target="_blank" href="https://web.cvent.com/event/abc08006-ebf7-4145-b63c-603fd6f165b4/summary">Construct I/O Homepage</a> | <a href="https://www.linkedin.com/posts/aditanup_movefastbuildthings-tech-ai-activity-7254591382634274816-EKsA?utm_source=share&utm_medium=member_desktop">LinkedIn Post</a></small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/DeutscheBank.png" alt="podcast image">
+              <div class="card-body">
+                <h5 class="card-title">Deutsche Bank - Technology, Data, Innovation Intern</h5>
+                <p class="card-text">
+                    In Summer 2024, I interned with <a target="_blank" href="https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut">Deutsche Bank</a> on a market risk tech team.
+                    <ul>
+                        <li>
+                            Developed test approach plans to validate new feature functionality for RiskFinder, a big data platform responsible for calculating the investment bank's quantitative risk valuations.
+                        </li>
+                        <li>
+                            Designed and executed behavior-driven development (BDD) test cases written with Gherkin and the Cucumber test automation framework to ensure proper end-to-end functionality of the features.
+                        </li>
+                        <li>
+                            Developed a data visualization dashboard to extract ESG insights from multimodal data using AI models and LLMs on the Google Cloud Platform with Python and Plotly Dash. Presented prototype to executive stakeholders.
+                        </li>
+                    </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4" >
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/Nationwide.png" alt="podcast image">
+              <div class="card-body">
+                <h5 class="card-title">Nationwide - Software Engineer Intern</h5>
+                <p class="card-text">
+                    I interned with <a target="_blank" href="https://www.nationwide.com/">Nationwide</a> in Summer 2023 and worked on back-end app development in the Property & Casualty Insurance space.
+                    <ul>
+                        <li>
+                            Developed back-end object-oriented code in Java to resolve production defects for PolicyCenter, Nationwide's enterprise application that processes all customer insurance policy transactions.                        
+                        </li>
+                        <li>
+                            Designed SQL queries to search database for policies that were affected by the production defects.
+                        </li>
+                        <li>
+                            Built an API test automation tool with Postman, streamlining the testing process and reducing manual intervention. Integrated tool within the Concourse CI/CD pipeline.
+                        </li>
+                        <li>
+                            Created data visualization dashboard in Splunk to display 10+ performance metrics for automated regression testing.
+                        </li>
+                    </ul>    
+                </p>            
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 mb-4">
+            <div data-aos="zoom-in-up" data-aos-once="true" class="card" style="border-radius: 40px;">
+              <img style="border-top-left-radius: 40px; border-top-right-radius: 40px;" class="bd-placeholder-img card-img-top" src="images/AmericanElectricPower.png" alt="podcast image">
+              <div class="card-body">
+                <h5 class="card-title">American Electric Power - Technology Intern</h5>
+                <p class="card-text">
+                    I interned with <a target="_blank" href="https://www.aep.com/">American Electric Power</a> in Summer 2022 and worked on an billing IT team. 
+                    <ul>   
+                        <li>
+                            Led functional requirements gathering for billing automation system that processes $5 million+ worth of invoices.                        
+                        </li>
+                        <li>
+                            Wrote project management plan, risks, and user acceptance criteria for a Microsoft Power Automate renewal automation system used by 100+ energy suppliers.
+                        </li>
+                        <li>
+                            Collaborated with developers to create technical documentation for an AWS cloud app.
+                        </li>
+                    </ul>    
+                  </p>            
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row rowPadding">
+          <!-- <div data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1000" class="col-sm-12 columnContainerGrey greyBackground"> -->
+            <div class="col-sm-12 columnContainerGrey greyBackground"> 
+              <div class="quote">
+                  <h1>
+                      <b>
+                          firstnamelastname [at] gmail [dot] com
+                      </b>
+                  </h1>
+              </div>
+          </div>
+        </div>
+
+        <footer class="pt-3 mt-4 text-body-secondary border-top">
+            &copy; 2024 Adit Anup
+        </footer>
+        <div class="spacerDiv"></div>
+    </div>
+
+    <!-- Bootstrap Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Animate On Scroll Library Javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 80) {
+                document.getElementById("logo").style.fontSize = "20px";
             } else {
-                menu.style.display = 'block';
+                document.getElementById("logo").style.fontSize = "48px";
             }
         }
-    </script>
 
+        // init Masonry
+        var $grid = $('.grid').masonry({
+          // options...
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+    </script>
 </body>
 </html>
