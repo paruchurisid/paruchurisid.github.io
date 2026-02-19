@@ -1,0 +1,202 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "filename": "photos/photo1.jpeg",
+      "location": "Location Name",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 2,
+      "filename": "photos/photo2.jpg",
+      "location": "Location Name",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 3,
+      "filename": "photos/photo3.jpg",
+      "location": "Location Name",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 4,
+      "filename": "photos/zionPhoto.JPG",
+      "location": "Zion National Park",
+      "description": "A breathtaking view captured during my visit to Zion National Park. This photograph showcases the natural beauty and stunning landscapes of one of America's most iconic national parks."
+    },
+    {
+      "id": 5,
+      "filename": "photos/mainphoto.JPG",
+      "location": "Location Name",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 6,
+      "filename": "photos/base.JPG",
+      "location": "Location Name",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 7,
+      "filename": "photos/photography/1.jpg",
+      "location": "Folly Beach, Charleston,South Carolina",
+      "description": "running along the beach"
+    },
+    {
+      "id": 8,
+      "filename": "photos/photography/2.jpg",
+      "location": "Tybee Island, Savannah, Georgia",
+      "description": "seagulls flying over the ocean Tybee Island"
+    },
+    {
+      "id": 9,
+      "filename": "photos/photography/3.jpg",
+      "location": "Crab Shack, Tybee Island, Georgia",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 10,
+      "filename": "photos/photography/4.jpg",
+      "location": " Savannah, Georgia",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 11,
+      "filename": "photos/photography/5.jpg",
+      "location": "Pioneer Field, Olentangy Orange High School, Delaware, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 12,
+      "filename": "photos/photography/6.jpg",
+      "location": "Mount Rainier National Park, Washington",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 13,
+      "filename": "photos/photography/7.jpg",
+      "location": "University of Michigan Law Library, Ann Arbor, Michigan",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 14,
+      "filename": "photos/photography/8.jpg",
+      "location": "A&R Music Bar, Columbus, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 15,
+      "filename": "photos/photography/9.jpg",
+      "location": "Cinemark Movie Theater, Columbus, Ohio",
+      "description": "Guntur Karam"
+    },
+    {
+      "id": 16,
+      "filename": "photos/photography/10.jpg",
+      "location": "Kemba Live, Columbus, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 17,
+      "filename": "photos/photography/11.jpg",
+      "location": "I-89, Vermont, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 18,
+      "filename": "photos/photography/12.jpg",
+      "location": "The Horseshoe, Columbus, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 19,
+      "filename": "photos/photography/13.jpg",
+      "location": "Route 1, California, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 20,
+      "filename": "photos/photography/14.jpg",
+      "location": "Monterey Bay, Monterey, California",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 21,
+      "filename": "photos/photography/15.jpg",
+      "location": "Big Sur, California, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 22,
+      "filename": "photos/photography/16.jpg",
+      "location": "7 Painted Rocks, Las Vegas, Nevada",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 23,
+      "filename": "photos/photography/17.jpg",
+      "location": "River Guagers House, Arizona, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 24,
+      "filename": "photos/photography/18.jpg",
+      "location": "Painted Desert Vista, Arizona, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 25,
+      "filename": "photos/photography/19.jpg",
+      "location": "Ohio Supreme Court, Columbus, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 26,
+      "filename": "photos/photography/20.jpg",
+      "location": "Allegria Hotel, Long Beach, Long Island, New York",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 27,
+      "filename": "photos/photography/21.jpg",
+      "location": "Brooklyn Bridge, New York, New York",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 28,
+      "filename": "photos/photography/22.jpg",
+      "location": "Cichmanguluru, Karnataka, India",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 29,
+      "filename": "photos/photography/23.jpg",
+      "location": "Heritage Park, Westerville, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 30,
+      "filename": "photos/photography/24.jpg",
+      "location": "My House, Westerville, Ohio",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 31,
+      "filename": "photos/photography/25.jpg",
+      "location": "Oakland, California, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 32,
+      "filename": "photos/photography/26.jpg",
+      "location": "Yosemite National Park, California, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    },
+    {
+      "id": 33,
+      "filename": "photos/photography/27.jpg",
+      "location": "Golden Gate Bridge, Marin Headlands, California, USA",
+      "description": "A short description about this photograph and the moment it captures."
+    }
+  ]
+}

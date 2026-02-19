@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: rgb(43, 77, 137);"></nav>
+    <title>Photography Portfolio - Siddhartha Paruchuri</title>
+    <link rel="icon" type="image/x-icon" href="photos/titlephoto.JPG">
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Animate On Scroll Library CSS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- images loaded library-->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <style>
+        .photo-gallery {
+            padding: 20px 0;
+        }
+        .photo-item-container {
+            perspective: 1000px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .photo-item {
+            width: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .photo-item-container:hover .photo-item {
+            transform: rotateY(180deg);
+        }
+        .photo-front {
+            position: relative;
+            width: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        .photo-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgb(43, 77, 137), rgb(29, 58, 106));
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            color: white;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+        .photo-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .location-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .photo-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 90%;
+            margin: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .page-header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: rgb(245, 245, 247);
+            border-radius: 40px;
+            margin: 20px 0;
+        }
+        .page-header h1 {
+            color: rgb(43, 77, 137);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid maxWidth">
+
+        <!-- Navigation-->
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-lg" >
+                <div class="container-fluid maxWidth">
+                    <a class="navbar-brand" id="logo" href="index.html"><b>Siddhartha Paruchuri</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="index.html#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" target="_blank" href="https://docs.google.com/document/d/1GCiwBwgmH_756Wp2X0vd4A3ezbiyl0i4/edit?usp=sharing&ouid=109924698256419342001&rtpof=true&sd=true">Resume</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/siddhartha-paruchuri-34a353293">LinkedIn</a>
+                          </li>
+                        </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+
+        <div class="coverImageSpacerDiv"></div>
+
+        <!-- Page Header -->
+        <div class="row rowPadding">
+            <div data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="1000" class="col-sm-12">
+                <div class="page-header">
+                    <h1>Photography Portfolio</h1>
+                    <p class="lead">A collection of photographs I've taken</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacerDiv"></div>
+
+        <!-- Photo Gallery -->
+        <div class="row photo-gallery" id="photoGallery" data-masonry="{&quot;percentPosition&quot;: true }">
+            <!-- Photos will be dynamically loaded here -->
+        </div>
+
+        <div class="spacerDiv"></div>
+
+        <!-- Back to Home Button -->
+        <div class="row rowPadding">
+            <div class="col-sm-12 text-center">
+                <a href="index.html" class="btn btn-primary btn-lg" style="background-color: rgb(43, 77, 137); border: none; padding: 15px 40px; border-radius: 40px; font-size: 18px;">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+
+        <div class="spacerDiv"></div>
+
+        <footer class="pt-3 mt-4 text-body-secondary border-top">
+            &copy; 2024 Siddhartha Paruchuri
+        </footer>
+        <div class="spacerDiv"></div>
+    </div>
+
+    <!-- Bootstrap Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Animate On Scroll Library Javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <!--  Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+    <script>
+        // Photo data embedded directly to avoid CORS issues
+        const photoData = {
+          "photos": [
+            {
+              "id": 1,
+              "filename": "photos/photo1.jpeg",
+              "location": "Location Name",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 2,
+              "filename": "photos/photo2.jpg",
+              "location": "Location Name",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 3,
+              "filename": "photos/photo3.jpg",
+              "location": "Location Name",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 4,
+              "filename": "photos/zionPhoto.JPG",
+              "location": "Zion National Park",
+              "description": "A breathtaking view captured during my visit to Zion National Park. This photograph showcases the natural beauty and stunning landscapes of one of America's most iconic national parks."
+            },
+            {
+              "id": 5,
+              "filename": "photos/mainphoto.JPG",
+              "location": "Location Name",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 6,
+              "filename": "photos/base.JPG",
+              "location": "Location Name",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 7,
+              "filename": "photos/photography/1.jpg",
+              "location": "Folly Beach, Charleston,South Carolina",
+              "description": "running along the beach"
+            },
+            {
+              "id": 8,
+              "filename": "photos/photography/2.jpg",
+              "location": "Tybee Island, Savannah, Georgia",
+              "description": "seagulls flying over the ocean Tybee Island"
+            },
+            {
+              "id": 9,
+              "filename": "photos/photography/3.jpg",
+              "location": "Crab Shack, Tybee Island, Georgia",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 10,
+              "filename": "photos/photography/4.jpg",
+              "location": " Savannah, Georgia",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 11,
+              "filename": "photos/photography/5.jpg",
+              "location": "Pioneer Field, Olentangy Orange High School, Delaware, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 12,
+              "filename": "photos/photography/6.jpg",
+              "location": "Mount Rainier National Park, Washington",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 13,
+              "filename": "photos/photography/7.jpg",
+              "location": "University of Michigan Law Library, Ann Arbor, Michigan",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 14,
+              "filename": "photos/photography/8.jpg",
+              "location": "A&R Music Bar, Columbus, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 15,
+              "filename": "photos/photography/9.jpg",
+              "location": "Cinemark Movie Theater, Columbus, Ohio",
+              "description": "Guntur Karam"
+            },
+            {
+              "id": 16,
+              "filename": "photos/photography/10.jpg",
+              "location": "Kemba Live, Columbus, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 17,
+              "filename": "photos/photography/11.jpg",
+              "location": "I-89, Vermont, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 18,
+              "filename": "photos/photography/12.jpg",
+              "location": "The Horseshoe, Columbus, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 19,
+              "filename": "photos/photography/13.jpg",
+              "location": "Route 1, California, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 20,
+              "filename": "photos/photography/14.jpg",
+              "location": "Monterey Bay, Monterey, California",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 21,
+              "filename": "photos/photography/15.jpg",
+              "location": "Big Sur, California, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 22,
+              "filename": "photos/photography/16.jpg",
+              "location": "7 Painted Rocks, Las Vegas, Nevada",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 23,
+              "filename": "photos/photography/17.jpg",
+              "location": "River Guagers House, Arizona, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 24,
+              "filename": "photos/photography/18.jpg",
+              "location": "Painted Desert Vista, Arizona, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 25,
+              "filename": "photos/photography/19.jpg",
+              "location": "Ohio Supreme Court, Columbus, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 26,
+              "filename": "photos/photography/20.jpg",
+              "location": "Allegria Hotel, Long Beach, Long Island, New York",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 27,
+              "filename": "photos/photography/21.jpg",
+              "location": "Brooklyn Bridge, New York, New York",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 28,
+              "filename": "photos/photography/22.jpg",
+              "location": "Cichmanguluru, Karnataka, India",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 29,
+              "filename": "photos/photography/23.jpg",
+              "location": "Heritage Park, Westerville, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 30,
+              "filename": "photos/photography/24.jpg",
+              "location": "My House, Westerville, Ohio",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 31,
+              "filename": "photos/photography/25.jpg",
+              "location": "Oakland, California, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 32,
+              "filename": "photos/photography/26.jpg",
+              "location": "Yosemite National Park, California, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            },
+            {
+              "id": 33,
+              "filename": "photos/photography/27.jpg",
+              "location": "Golden Gate Bridge, Marin Headlands, California, USA",
+              "description": "A short description about this photograph and the moment it captures."
+            }
+          ]
+        };
+
+        // Load photos and dynamically generate gallery
+        function loadPhotos(data) {
+                if (!data || !data.photos || !Array.isArray(data.photos)) {
+                    throw new Error('Invalid JSON structure: photos array not found');
+                }
+                const gallery = document.getElementById('photoGallery');
+                
+                // Clear any existing content
+                gallery.innerHTML = '';
+                
+                // Create photo tiles for each photo
+                data.photos.forEach(photo => {
+                    const colDiv = document.createElement('div');
+                    colDiv.className = 'col-sm-6 col-lg-4 mb-4';
+                    
+                    const containerDiv = document.createElement('div');
+                    containerDiv.className = 'photo-item-container';
+                    
+                    const photoItemDiv = document.createElement('div');
+                    photoItemDiv.className = 'photo-item';
+                    photoItemDiv.setAttribute('data-aos', 'zoom-in-up');
+                    photoItemDiv.setAttribute('data-aos-once', 'true');
+                    
+                    // Front side with image
+                    const frontDiv = document.createElement('div');
+                    frontDiv.className = 'photo-front';
+                    const img = document.createElement('img');
+                    img.src = photo.filename;
+                    img.alt = 'Photography ' + photo.id;
+                    img.className = 'img-fluid';
+                    img.loading = 'lazy'; // Lazy load images for better performance
+                    frontDiv.appendChild(img);
+                    
+                    // Back side with location and description
+                    const backDiv = document.createElement('div');
+                    backDiv.className = 'photo-back';
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'photo-info';
+                    
+                    const locationDiv = document.createElement('div');
+                    locationDiv.className = 'location-name';
+                    locationDiv.innerHTML = '📍 ' + photo.location;
+                    infoDiv.appendChild(locationDiv);
+                    
+                    const descP = document.createElement('p');
+                    descP.className = 'photo-description';
+                    descP.textContent = photo.description;
+                    infoDiv.appendChild(descP);
+                    
+                    backDiv.appendChild(infoDiv);
+                    photoItemDiv.appendChild(frontDiv);
+                    photoItemDiv.appendChild(backDiv);
+                    containerDiv.appendChild(photoItemDiv);
+                    colDiv.appendChild(containerDiv);
+                    gallery.appendChild(colDiv);
+                });
+                
+                // Reinitialize AOS after adding photos
+                AOS.init({
+                    once: true,
+                    duration: 800
+                });
+                
+                // Setup flip animations for all photo containers
+                function setupFlipAnimations() {
+                    document.querySelectorAll('.photo-item-container').forEach(function(container) {
+                        var photoItem = container.querySelector('.photo-item');
+                        if (photoItem) {
+                            container.addEventListener('mouseenter', function() {
+                                photoItem.style.transform = 'rotateY(180deg)';
+                            });
+                            container.addEventListener('mouseleave', function() {
+                                photoItem.style.transform = 'rotateY(0deg)';
+                            });
+                        }
+                    });
+                }
+                setupFlipAnimations();
+                
+                // Initialize masonry layout - wait for Masonry to be available
+                function initMasonry() {
+                    if (typeof $ !== 'undefined' && typeof $.fn.masonry !== 'undefined') {
+                        var $grid = $('.photo-gallery').masonry({
+                            percentPosition: true,
+                            itemSelector: '.col-sm-6'
+                        });
+                        
+                        // Wait for all images to load, then layout masonry and set heights
+                        if (typeof imagesLoaded !== 'undefined') {
+                            imagesLoaded('.photo-gallery', function() {
+                                $grid.masonry('layout');
+                                setPhotoHeights();
+                                // Re-setup flip animations after layout
+                                setupFlipAnimations();
+                            });
+                        } else {
+                            // Fallback if imagesLoaded not available
+                            $grid.imagesLoaded().progress(function() {
+                                $grid.masonry('layout');
+                            }).done(function() {
+                                $grid.masonry('layout');
+                                setPhotoHeights();
+                                setupFlipAnimations();
+                            });
+                        }
+                        
+                        // Also set heights when individual images load
+                        document.querySelectorAll('.photo-front img').forEach(function(img) {
+                            img.addEventListener('load', function() {
+                                setPhotoHeights();
+                                $grid.masonry('layout');
+                            });
+                            // Handle already loaded images
+                            if (img.complete) {
+                                setPhotoHeights();
+                                $grid.masonry('layout');
+                            }
+                        });
+                    } else {
+                        // Retry if Masonry not loaded yet
+                        setTimeout(initMasonry, 100);
+                    }
+                }
+                
+                // Wait a bit for scripts to load, then initialize
+                setTimeout(initMasonry, 100);
+        }
+
+        // Wait for DOM and scripts to be ready, then load photos
+        $(document).ready(function() {
+            // Wait a bit more to ensure Masonry is loaded
+            setTimeout(function() {
+                try {
+                    loadPhotos(photoData);
+                } catch (error) {
+                    console.error('Error loading photos:', error);
+                    const gallery = document.getElementById('photoGallery');
+                    if (gallery) {
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'col-12 text-center';
+                        errorDiv.innerHTML = '<div style="padding: 40px; background-color: #f8f9fa; border-radius: 20px; margin: 20px 0;"><h3 style="color: #dc3545; margin-bottom: 15px;">Error Loading Photos</h3><p style="color: #6c757d; margin-bottom: 10px;">' + error.message + '</p><p style="color: #6c757d; font-size: 14px;">Please check the browser console for more details.</p></div>';
+                        gallery.appendChild(errorDiv);
+                    }
+                }
+            }, 200);
+        });
+
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 80) {
+                document.getElementById("logo").style.fontSize = "20px";
+            } else {
+                document.getElementById("logo").style.fontSize = "48px";
+            }
+        }
+
+        // Function to set heights based on image dimensions
+        function setPhotoHeights() {
+            document.querySelectorAll('.photo-item-container').forEach(function(container) {
+                var front = container.querySelector('.photo-front');
+                var photoItem = container.querySelector('.photo-item');
+                var back = container.querySelector('.photo-back');
+                var img = front ? front.querySelector('img') : null;
+                
+                if (img && img.complete && img.naturalHeight > 0) {
+                    // Calculate height based on image's natural aspect ratio
+                    var aspectRatio = img.naturalHeight / img.naturalWidth;
+                    var containerWidth = container.offsetWidth || img.offsetWidth;
+                    var calculatedHeight = containerWidth * aspectRatio;
+                    
+                    // Set heights
+                    if (photoItem) photoItem.style.height = calculatedHeight + 'px';
+                    if (back) back.style.height = calculatedHeight + 'px';
+                }
+            });
+        }
+        
+        // Set heights on window resize
+        window.addEventListener('resize', function() {
+            setPhotoHeights();
+            var $grid = $('.photo-gallery').data('masonry');
+            if ($grid) {
+                $grid.masonry('layout');
+            }
+        });
+    </script>
+</body>
+</html>
+
