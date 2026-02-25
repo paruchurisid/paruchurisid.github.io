@@ -159,22 +159,6 @@
         </div>
 
         <div class="spacerDiv"></div>
-
-        <!-- Back to Home Button -->
-        <div class="row rowPadding">
-            <div class="col-sm-12 text-center">
-                <a href="index.html" class="btn btn-primary btn-lg" style="background-color: rgb(43, 77, 137); border: none; padding: 15px 40px; border-radius: 40px; font-size: 18px;">
-                    Back to Home
-                </a>
-            </div>
-        </div>
-
-        <div class="spacerDiv"></div>
-
-        <footer class="pt-3 mt-4 text-body-secondary border-top">
-            &copy; 2024 Siddhartha Paruchuri
-        </footer>
-        <div class="spacerDiv"></div>
     </div>
 
     <!-- Bootstrap Javascript-->
@@ -189,211 +173,35 @@
     <!--  Masonry -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
     <script>
-        // Photo data embedded directly to avoid CORS issues
-        const photoData = {
-          "photos": [
-            {
-              "id": 1,
-              "filename": "photos/photo1.jpeg",
-              "location": "Location Name",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 2,
-              "filename": "photos/photo2.jpg",
-              "location": "Location Name",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 3,
-              "filename": "photos/photo3.jpg",
-              "location": "Location Name",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 4,
-              "filename": "photos/zionPhoto.JPG",
-              "location": "Zion National Park",
-              "description": "A breathtaking view captured during my visit to Zion National Park. This photograph showcases the natural beauty and stunning landscapes of one of America's most iconic national parks."
-            },
-            {
-              "id": 5,
-              "filename": "photos/mainphoto.JPG",
-              "location": "Location Name",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 6,
-              "filename": "photos/base.JPG",
-              "location": "Location Name",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 7,
-              "filename": "photos/photography/1.jpg",
-              "location": "Folly Beach, Charleston,South Carolina",
-              "description": "running along the beach"
-            },
-            {
-              "id": 8,
-              "filename": "photos/photography/2.jpg",
-              "location": "Tybee Island, Savannah, Georgia",
-              "description": "seagulls flying over the ocean Tybee Island"
-            },
-            {
-              "id": 9,
-              "filename": "photos/photography/3.jpg",
-              "location": "Crab Shack, Tybee Island, Georgia",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 10,
-              "filename": "photos/photography/4.jpg",
-              "location": " Savannah, Georgia",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 11,
-              "filename": "photos/photography/5.jpg",
-              "location": "Pioneer Field, Olentangy Orange High School, Delaware, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 12,
-              "filename": "photos/photography/6.jpg",
-              "location": "Mount Rainier National Park, Washington",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 13,
-              "filename": "photos/photography/7.jpg",
-              "location": "University of Michigan Law Library, Ann Arbor, Michigan",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 14,
-              "filename": "photos/photography/8.jpg",
-              "location": "A&R Music Bar, Columbus, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 15,
-              "filename": "photos/photography/9.jpg",
-              "location": "Cinemark Movie Theater, Columbus, Ohio",
-              "description": "Guntur Karam"
-            },
-            {
-              "id": 16,
-              "filename": "photos/photography/10.jpg",
-              "location": "Kemba Live, Columbus, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 17,
-              "filename": "photos/photography/11.jpg",
-              "location": "I-89, Vermont, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 18,
-              "filename": "photos/photography/12.jpg",
-              "location": "The Horseshoe, Columbus, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 19,
-              "filename": "photos/photography/13.jpg",
-              "location": "Route 1, California, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 20,
-              "filename": "photos/photography/14.jpg",
-              "location": "Monterey Bay, Monterey, California",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 21,
-              "filename": "photos/photography/15.jpg",
-              "location": "Big Sur, California, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 22,
-              "filename": "photos/photography/16.jpg",
-              "location": "7 Painted Rocks, Las Vegas, Nevada",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 23,
-              "filename": "photos/photography/17.jpg",
-              "location": "River Guagers House, Arizona, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 24,
-              "filename": "photos/photography/18.jpg",
-              "location": "Painted Desert Vista, Arizona, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 25,
-              "filename": "photos/photography/19.jpg",
-              "location": "Ohio Supreme Court, Columbus, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 26,
-              "filename": "photos/photography/20.jpg",
-              "location": "Allegria Hotel, Long Beach, Long Island, New York",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 27,
-              "filename": "photos/photography/21.jpg",
-              "location": "Brooklyn Bridge, New York, New York",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 28,
-              "filename": "photos/photography/22.jpg",
-              "location": "Cichmanguluru, Karnataka, India",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 29,
-              "filename": "photos/photography/23.jpg",
-              "location": "Heritage Park, Westerville, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 30,
-              "filename": "photos/photography/24.jpg",
-              "location": "My House, Westerville, Ohio",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 31,
-              "filename": "photos/photography/25.jpg",
-              "location": "Oakland, California, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 32,
-              "filename": "photos/photography/26.jpg",
-              "location": "Yosemite National Park, California, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            },
-            {
-              "id": 33,
-              "filename": "photos/photography/27.jpg",
-              "location": "Golden Gate Bridge, Marin Headlands, California, USA",
-              "description": "A short description about this photograph and the moment it captures."
-            }
-          ]
-        };
+        // Load photo data: try JSON first (works over HTTP); fallback to .js when opened as file:// (CORS blocks fetch)
+        function loadPhotoData() {
+            return fetch('photography-data.json')
+                .then(function(response) {
+                    if (!response.ok) throw new Error('Failed to load photography data: ' + response.status);
+                    return response.json();
+                })
+                .catch(function() {
+                    return loadPhotoDataFallback();
+                });
+        }
+        function loadPhotoDataFallback() {
+            return new Promise(function(resolve, reject) {
+                if (typeof window.__PHOTO_DATA__ !== 'undefined') {
+                    resolve(window.__PHOTO_DATA__);
+                    return;
+                }
+                var script = document.createElement('script');
+                script.src = 'photography-data.js';
+                script.onload = function() {
+                    if (window.__PHOTO_DATA__) resolve(window.__PHOTO_DATA__);
+                    else reject(new Error('photography-data.js did not define photo data'));
+                };
+                script.onerror = function() { reject(new Error('Could not load photography-data.json or photography-data.js. Open the site via a local server (e.g. npx serve) or use GitHub Pages.')); };
+                document.head.appendChild(script);
+            });
+        }
 
-        // Load photos and dynamically generate gallery
+        // Load photos and dynamically generate gallery (uses data from photography-data.json: description, location, filename)
         function loadPhotos(data) {
                 if (!data || !data.photos || !Array.isArray(data.photos)) {
                     throw new Error('Invalid JSON structure: photos array not found');
@@ -521,22 +329,23 @@
                 setTimeout(initMasonry, 100);
         }
 
-        // Wait for DOM and scripts to be ready, then load photos
+        // Load photography-data.json at runtime, then render gallery (uses description, location, filename from JSON)
         $(document).ready(function() {
-            // Wait a bit more to ensure Masonry is loaded
             setTimeout(function() {
-                try {
-                    loadPhotos(photoData);
-                } catch (error) {
-                    console.error('Error loading photos:', error);
-                    const gallery = document.getElementById('photoGallery');
-                    if (gallery) {
-                        const errorDiv = document.createElement('div');
-                        errorDiv.className = 'col-12 text-center';
-                        errorDiv.innerHTML = '<div style="padding: 40px; background-color: #f8f9fa; border-radius: 20px; margin: 20px 0;"><h3 style="color: #dc3545; margin-bottom: 15px;">Error Loading Photos</h3><p style="color: #6c757d; margin-bottom: 10px;">' + error.message + '</p><p style="color: #6c757d; font-size: 14px;">Please check the browser console for more details.</p></div>';
-                        gallery.appendChild(errorDiv);
-                    }
-                }
+                loadPhotoData()
+                    .then(function(photoData) {
+                        loadPhotos(photoData);
+                    })
+                    .catch(function(error) {
+                        console.error('Error loading photos:', error);
+                        const gallery = document.getElementById('photoGallery');
+                        if (gallery) {
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'col-12 text-center';
+                            errorDiv.innerHTML = '<div style="padding: 40px; background-color: #f8f9fa; border-radius: 20px; margin: 20px 0;"><h3 style="color: #dc3545; margin-bottom: 15px;">Error Loading Photos</h3><p style="color: #6c757d; margin-bottom: 10px;">' + (error.message || 'Could not load photography-data.json') + '</p><p style="color: #6c757d; font-size: 14px;">Please check the browser console for more details.</p></div>';
+                            gallery.appendChild(errorDiv);
+                        }
+                    });
             }, 200);
         });
 

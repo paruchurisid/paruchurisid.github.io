@@ -1,0 +1,8 @@
+{
+  "name": "paruchurisid.github.io",
+  "private": true,
+  "scripts": {
+    "build:photos": "node build-photography-data.js",
+    "watch:photos": "node build-photography-data.js --watch"
+  }
+}
