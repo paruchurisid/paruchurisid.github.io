@@ -1,8 +1,17 @@
 {
   "name": "paruchurisid.github.io",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "build:photos": "node build-photography-data.js",
-    "watch:photos": "node build-photography-data.js --watch"
+    "watch:photos": "node build-photography-data.js --watch",
+    "seed:photos": "node server/seed-photos.js",
+    "dev:api": "node server/api.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.16.0"
   }
 }

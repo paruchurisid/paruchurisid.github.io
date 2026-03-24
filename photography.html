@@ -173,15 +173,30 @@
     <!--  Masonry -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
     <script>
-        // Load photo data: try JSON first (works over HTTP); fallback to .js when opened as file:// (CORS blocks fetch)
+        // Load photo data:
+        // - Prefer Mongo-backed local API when running locally
+        // - Fallback to photography-data.json (GitHub Pages / static hosting)
+        // - Fallback to photography-data.js when opened as file:// (fetch blocked by CORS)
         function loadPhotoData() {
+            return loadPhotoDataFromApi()
+                .catch(function() { return loadPhotoDataFromJson(); })
+                .catch(function() { return loadPhotoDataFallback(); });
+        }
+
+        function loadPhotoDataFromApi() {
+            // Only works if you run: npm run dev:api (defaults to http://localhost:5177)
+            return fetch('http://localhost:5177/api/photos')
+                .then(function(response) {
+                    if (!response.ok) throw new Error('API failed: ' + response.status);
+                    return response.json();
+                });
+        }
+
+        function loadPhotoDataFromJson() {
             return fetch('photography-data.json')
                 .then(function(response) {
                     if (!response.ok) throw new Error('Failed to load photography data: ' + response.status);
                     return response.json();
-                })
-                .catch(function() {
-                    return loadPhotoDataFallback();
                 });
         }
         function loadPhotoDataFallback() {
